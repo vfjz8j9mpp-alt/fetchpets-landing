@@ -21,22 +21,34 @@
 
   <p class="coming-soon">🐾 Coming Soon to iOS & Android</p>
 
-  <form method="POST" action="/" data-cf-form="waitlist">
-  <input type="hidden" name="form-name" value="waitlist" />
-
+ <div class="waitlist-form">
   <input
     type="email"
-    name="email"
+    id="waitlistEmail"
     placeholder="Enter your email"
     required
   />
 
-  <button type="submit">Join the Early Access List</button>
+  <button onclick="joinWaitlist()">Join the Early Access List</button>
 
   <p class="microcopy">
     We’ll only email about launch and early access. Unsubscribe anytime.
   </p>
-</form>
+</div>
+
+<script>
+  function joinWaitlist() {
+    const email = document.getElementById('waitlistEmail').value;
+    if (!email) {
+      alert('Please enter your email.');
+      return;
+    }
+    window.location.href =
+      'mailto:launch@fetchpets.app?subject=FetchPets Waitlist&body=Please add me to the FetchPets waitlist.%0D%0A%0D%0AEmail: ' +
+      encodeURIComponent(email);
+  }
+</script>
+
 
 </header>
 
