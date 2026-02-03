@@ -21,12 +21,23 @@
 
   <p class="coming-soon">🐾 Coming Soon to iOS & Android</p>
 
-  <form method="POST" data-static-form-name="waitlist" class="waitlist-form">
-    <input type="hidden" name="form-name" value="waitlist" />
-    <input type="email" name="email" placeholder="Enter your email" required />
-    <button type="submit">Join the Early Access List</button>
-    <p class="microcopy">We’ll only email about launch and early access. Unsubscribe anytime.</p>
-  </form>
+  <form method="POST" action="/" data-cf-form="waitlist">
+  <input type="hidden" name="form-name" value="waitlist" />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter your email"
+    required
+  />
+
+  <button type="submit">Join the Early Access List</button>
+
+  <p class="microcopy">
+    We’ll only email about launch and early access. Unsubscribe anytime.
+  </p>
+</form>
+
 </header>
 
 <main>
